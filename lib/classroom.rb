@@ -16,4 +16,13 @@ class Classroom
   def yell_at_students
     @students.map(&:upcase)
   end
+
+  def over_capacity?
+    @students.size > @capacity
+  end
+
+  def kick_out
+    @students.shift
+  end
+
 end
